@@ -1,5 +1,6 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:navigation/navigation.dart';
 
 class MyApp extends StatelessWidget {
   final List<FeatureModule> modules;
@@ -8,11 +9,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final initialModule = modules.first;
+    final router = RouteRegistry().buildRouter(modules);
 
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Mobile Engineering Playground',
-      home: initialModule.buildPage(),
+      routerConfig: router,
     );
   }
 }

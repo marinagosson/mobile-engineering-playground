@@ -116,6 +116,12 @@
       "languageVersion": "3.10"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Users/marinagosson/Library/Android/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "3.10"
+    },
+    {
       "name": "get_it",
       "rootUri": "file:///Users/marinagosson/.puro/shared/pub_cache/hosted/pub.dev/get_it-9.2.1",
       "packageUri": "lib/",
@@ -126,6 +132,12 @@
       "rootUri": "file:///Users/marinagosson/.puro/shared/pub_cache/hosted/pub.dev/glob-2.1.3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
+    },
+    {
+      "name": "go_router",
+      "rootUri": "file:///Users/marinagosson/.puro/shared/pub_cache/hosted/pub.dev/go_router-17.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.10"
     },
     {
       "name": "graphs",
@@ -180,6 +192,12 @@
       "rootUri": "file:///Users/marinagosson/.puro/shared/pub_cache/hosted/pub.dev/lints-6.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.8"
+    },
+    {
+      "name": "logging",
+      "rootUri": "file:///Users/marinagosson/.puro/shared/pub_cache/hosted/pub.dev/logging-1.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "matcher",
@@ -394,6 +412,12 @@
     {
       "name": "home",
       "rootUri": "../packages/home",
+      "packageUri": "lib/",
+      "languageVersion": "3.12"
+    },
+    {
+      "name": "navigation",
+      "rootUri": "../packages/navigation",
       "packageUri": "lib/",
       "languageVersion": "3.12"
     }

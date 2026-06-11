@@ -15,8 +15,9 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
-  core: ^0.0.1
-  home: ^0.0.1
+  core:
+  home: 
+  navigation:
 
 dev_dependencies:
   flutter_test:
