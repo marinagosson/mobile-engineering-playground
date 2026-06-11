@@ -14,6 +14,7 @@ workspace:
   - packages/design_system
   - packages/home
   - packages/navigation
+  - packages/network
 
 dev_dependencies:
   melos: ^7.8.2
