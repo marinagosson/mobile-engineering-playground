@@ -2,6 +2,8 @@ import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
+import 'home_repository.dart';
+import 'home_repository_impl.dart';
 
 class HomeModule implements FeatureModule {
   @override
@@ -13,5 +15,7 @@ class HomeModule implements FeatureModule {
   }
 
   @override
-  void registerDependencies() {}
+  void registerDependencies() {
+    sl.registerLazySingleton<HomeRepository>(HomeRepositoryImpl.new);
+  }
 }

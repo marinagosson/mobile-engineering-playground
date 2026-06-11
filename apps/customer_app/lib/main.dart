@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:home/home.dart';
 
 import 'app.dart';
+import 'modules.dart';
 
 void main() {
-  final modules = [HomeModule()];
+  final modules = getModules();
 
   for (final module in modules) {
     module.registerDependencies();
