@@ -22,6 +22,7 @@
       "name": "customer_app",
       "version": "1.0.0+1",
       "dependencies": [
+        "core",
         "cupertino_icons",
         "flutter"
       ],
@@ -67,7 +68,8 @@
       "name": "core",
       "version": "0.0.1",
       "dependencies": [
-        "flutter"
+        "flutter",
+        "get_it"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -161,6 +163,15 @@
         "meta",
         "sky_engine",
         "vector_math"
+      ]
+    },
+    {
+      "name": "get_it",
+      "version": "9.2.1",
+      "dependencies": [
+        "async",
+        "collection",
+        "meta"
       ]
     },
     {
