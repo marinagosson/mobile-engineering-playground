@@ -24,7 +24,8 @@
       "dependencies": [
         "core",
         "cupertino_icons",
-        "flutter"
+        "flutter",
+        "home"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -91,6 +92,7 @@
       "name": "home",
       "version": "0.0.1",
       "dependencies": [
+        "core",
         "flutter"
       ],
       "devDependencies": [
