@@ -1,8 +1,15 @@
+import 'package:auth/src/login_controller.dart';
+import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  LoginPage({super.key});
+
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  final controller = sl<LoginController>();
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +29,17 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               FilledButton(
-                onPressed: () {
-                  context.go('/home');
+                onPressed: () async {
+                  final success = await controller.login(
+                    emailController.text,
+                    passwordController.text,
+                  );
+
+                  if (!context.mounted) return;
+
+                  if (success) {
+                    context.go('/home');
+                  }
                 },
                 child: const Text('Entrar'),
               ),
