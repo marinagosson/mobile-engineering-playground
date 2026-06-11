@@ -11,14 +11,14 @@ environment:
   sdk: ^3.12.1
   
 dependencies:
-  flutter:
-    sdk: flutter
-
-  cupertino_icons: ^1.0.8
   core:
   home:
   auth: 
   navigation:
+  network:  
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:

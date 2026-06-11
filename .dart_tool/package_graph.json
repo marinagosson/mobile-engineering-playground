@@ -29,7 +29,8 @@
         "cupertino_icons",
         "flutter",
         "home",
-        "navigation"
+        "navigation",
+        "network"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -42,7 +43,8 @@
       "dependencies": [
         "core",
         "flutter",
-        "go_router"
+        "go_router",
+        "network"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -123,6 +125,7 @@
       "name": "network",
       "version": "0.0.1",
       "dependencies": [
+        "core",
         "dio",
         "flutter"
       ],
