@@ -13,6 +13,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    emailController.text = 'admin@test.com';
+    passwordController.text = '123456';
     return Scaffold(
       appBar: AppBar(title: const Text('Login')),
       body: Center(
@@ -21,23 +23,27 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const TextField(decoration: InputDecoration(labelText: 'Email')),
+              TextField(
+                controller: emailController,
+                decoration: InputDecoration(labelText: 'Email'),
+              ),
               const SizedBox(height: 16),
-              const TextField(
+              TextField(
+                controller: passwordController,
                 obscureText: true,
                 decoration: InputDecoration(labelText: 'Senha'),
               ),
               const SizedBox(height: 24),
               FilledButton(
                 onPressed: () async {
-                  final success = await controller.login(
+                  final response = await controller.login(
                     emailController.text,
                     passwordController.text,
                   );
 
-                  if (!context.mounted) return;
+                  debugPrint(response.userName);
 
-                  if (success) {
+                  if (context.mounted) {
                     context.go('/home');
                   }
                 },

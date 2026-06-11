@@ -1,3 +1,5 @@
+import 'package:auth/src/models/login_response.dart';
+
 import 'auth_repository.dart';
 import 'package:network/network.dart';
 
@@ -7,12 +9,12 @@ class AuthRepositoryImpl implements AuthRepository {
   AuthRepositoryImpl(this.apiClient);
 
   @override
-  Future<bool> login(String email, String password) async {
-    await apiClient.post(
-      '/login',
+  Future<LoginResponse> login(String email, String password) async {
+    final response = await apiClient.post<Map<String, dynamic>>(
+      '/auth/login',
       data: {'email': email, 'password': password},
     );
 
-    return true;
+    return LoginResponse.fromJson(response);
   }
 }

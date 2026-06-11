@@ -1,3 +1,5 @@
+import 'package:auth/src/models/login_response.dart';
+
 abstract interface class AuthRepository {
-  Future<bool> login(String email, String password);
+  Future<LoginResponse> login(String email, String password);
 }

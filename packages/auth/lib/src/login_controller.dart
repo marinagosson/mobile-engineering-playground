@@ -1,3 +1,5 @@
+import 'package:auth/src/models/login_response.dart';
+
 import 'auth_repository.dart';
 
 class LoginController {
@@ -5,7 +7,7 @@ class LoginController {
 
   LoginController(this.repository);
 
-  Future<bool> login(String email, String password) {
+  Future<LoginResponse> login(String email, String password) {
     return repository.login(email, password);
   }
 }

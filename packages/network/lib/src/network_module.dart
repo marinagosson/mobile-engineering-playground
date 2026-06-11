@@ -7,7 +7,7 @@ import 'interceptors/logging_interceptor.dart';
 
 class NetworkModule {
   void registerDependencies() {
-    final dio = Dio();
+    final dio = Dio(BaseOptions(baseUrl: 'http://localhost:3000'));
 
     dio.interceptors.add(LoggingInterceptor());
 
