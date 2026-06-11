@@ -14,4 +14,11 @@ class LoggingInterceptor extends Interceptor {
 
     super.onResponse(response, handler);
   }
+
+  @override
+  void onError(DioException err, ErrorInterceptorHandler handler) {
+    print('[ERROR] ${err.message}');
+
+    super.onError(err, handler);
+  }
 }
