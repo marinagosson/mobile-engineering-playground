@@ -23,6 +23,7 @@
       "name": "customer_app",
       "version": "1.0.0+1",
       "dependencies": [
+        "auth",
         "core",
         "cupertino_icons",
         "flutter",
@@ -38,7 +39,9 @@
       "name": "auth",
       "version": "0.0.1",
       "dependencies": [
-        "flutter"
+        "core",
+        "flutter",
+        "go_router"
       ],
       "devDependencies": [
         "flutter_lints",

@@ -1,6 +1,8 @@
 import 'package:flutter/widgets.dart';
 
 abstract interface class FeatureModule {
+  String get name;
+
   String get route;
 
   Widget buildPage();

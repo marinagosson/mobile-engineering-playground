@@ -7,7 +7,7 @@ import 'home_repository_impl.dart';
 
 class HomeModule implements FeatureModule {
   @override
-  String get route => '/';
+  String get route => '/home';
 
   @override
   Widget buildPage() {
@@ -18,4 +18,7 @@ class HomeModule implements FeatureModule {
   void registerDependencies() {
     sl.registerLazySingleton<HomeRepository>(HomeRepositoryImpl.new);
   }
+
+  @override
+  String get name => 'home';
 }
