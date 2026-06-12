@@ -8,12 +8,7 @@ import 'modules.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await bootstrap(
-    const AppConfig(
-      environment: Environment.dev,
-      apiBaseUrl: 'http://localhost:3000',
-    ),
-  );
+  await bootstrap(EnvironmentFactory.create());
 
   final moduleRegistry = getModules();
 

@@ -134,6 +134,7 @@
       "name": "network",
       "version": "0.0.1",
       "dependencies": [
+        "config",
         "core",
         "dio",
         "flutter",

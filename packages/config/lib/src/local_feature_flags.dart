@@ -1,9 +1,21 @@
+import 'package:config/config.dart';
+
 import 'feature_flags.dart';
 
 class LocalFeatureFlags implements FeatureFlags {
-  @override
-  bool get experimentalHome => true;
+  final AppConfig config;
+
+  LocalFeatureFlags(this.config);
 
   @override
-  bool get experimentalBanner => false;
+  bool get experimentalHome {
+    return switch (config.environment) {
+      Environment.dev => true,
+      Environment.qa => true,
+      Environment.prod => false,
+    };
+  }
+
+  @override
+  bool get homeButton => false;
 }

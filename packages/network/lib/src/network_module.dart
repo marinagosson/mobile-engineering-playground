@@ -1,3 +1,4 @@
+import 'package:config/config.dart';
 import 'package:core/core.dart';
 import 'package:dio/dio.dart';
 
@@ -7,7 +8,9 @@ import 'interceptors/logging_interceptor.dart';
 
 class NetworkModule {
   void registerDependencies() {
-    final dio = Dio(BaseOptions(baseUrl: 'http://localhost:3000'));
+    final config = sl<AppConfig>();
+
+    final dio = Dio(BaseOptions(baseUrl: config.apiBaseUrl));
 
     dio.interceptors.add(LoggingInterceptor());
 

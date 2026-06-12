@@ -9,13 +9,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final flags = sl<FeatureFlags>();
+    final config = sl<AppConfig>();
 
     return Scaffold(
       appBar: AppBar(title: const Text('Home')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [if (flags.experimentalBanner) const ExperimentalBanner()],
+        children: [
+          if (flags.homeButton) const ExperimentalBanner(),
+          Text(config.environment.name, style: TextStyle(color: Colors.black)),
+        ],
       ),
     );
   }
