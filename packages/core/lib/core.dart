@@ -1,5 +1,3 @@
-library core;
-
 export 'src/logging/logger.dart';
 export 'src/logging/console_logger.dart';
 

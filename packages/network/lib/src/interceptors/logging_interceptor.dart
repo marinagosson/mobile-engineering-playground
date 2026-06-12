@@ -1,23 +1,30 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 class LoggingInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    print('[REQUEST] ${options.method} ${options.path}');
+    if (kDebugMode) {
+      print('[REQUEST] ${options.method} ${options.path}');
+    }
 
     super.onRequest(options, handler);
   }
 
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
-    print('[RESPONSE] ${response.statusCode}');
+    if (kDebugMode) {
+      print('[RESPONSE] ${response.statusCode}');
+    }
 
     super.onResponse(response, handler);
   }
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
-    print('[ERROR] ${err.message}');
+    if (kDebugMode) {
+      print('[ERROR] ${err.message}');
+    }
 
     super.onError(err, handler);
   }

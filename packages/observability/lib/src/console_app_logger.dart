@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:observability/src/app_logger.dart';
 
 class ConsoleAppLogger implements AppLogger {
@@ -8,7 +9,9 @@ class ConsoleAppLogger implements AppLogger {
     String message, {
     Map<String, dynamic>? metadata,
   }) {
-    print('$fileName.$functionName() $message $metadata');
+    if (kDebugMode) {
+      print('$fileName.$functionName() $message $metadata');
+    }
   }
 
   @override
@@ -18,6 +21,8 @@ class ConsoleAppLogger implements AppLogger {
     StackTrace? stackTrace,
     Map<String, dynamic>? metadata,
   }) {
-    print('[ERROR] $message');
+    if (kDebugMode) {
+      print('[ERROR] $message');
+    }
   }
 }

@@ -7,6 +7,6 @@ class RouteRegistry {
   }
 
   GoRoute _buildRoute(FeatureModule module) {
-    return GoRoute(path: module.route, builder: (_, __) => module.buildPage());
+    return GoRoute(path: module.route, builder: (_, _) => module.buildPage());
   }
 }

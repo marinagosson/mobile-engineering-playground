@@ -1,7 +1,5 @@
 import 'package:config/config.dart';
 
-import 'feature_flags.dart';
-
 class LocalFeatureFlags implements FeatureFlags {
   final AppConfig config;
 
