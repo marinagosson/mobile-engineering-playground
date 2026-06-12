@@ -3,6 +3,8 @@ import { randomUUID } from 'crypto';
 import { Request, Response, NextFunction }
   from 'express';
 
+import { logger } from '../observability';;
+
 export function requestLogger(
   req: Request,
   res: Response,
@@ -10,9 +12,9 @@ export function requestLogger(
 ) {
   const requestId = randomUUID();
 
-    req.context = {
-    requestId,
-    };
+  req.context = { 
+  requestId,
+  };
 
   const start = Date.now();
 
@@ -20,15 +22,17 @@ export function requestLogger(
     const duration =
       Date.now() - start;
 
-    console.log(
-      JSON.stringify({
+    logger.info(
+      'Request completed',
+      {
         requestId,
         method: req.method,
         path: req.originalUrl,
         statusCode: res.statusCode,
         durationMs: duration,
-      }),
+      },
     );
+
   });
 
   next();
