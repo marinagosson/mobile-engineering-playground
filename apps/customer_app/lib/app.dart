@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:navigation/navigation.dart';
 
 class MyApp extends StatelessWidget {
-  final List<FeatureModule> modules;
+  final ModuleRegistry modules;
 
   const MyApp(this.modules, {super.key});
 

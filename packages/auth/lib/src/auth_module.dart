@@ -29,4 +29,7 @@ class AuthModule implements FeatureModule {
 
   @override
   String get name => 'auth';
+
+  @override
+  String get version => '1.0.0';
 }

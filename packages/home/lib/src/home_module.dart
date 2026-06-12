@@ -21,4 +21,7 @@ class HomeModule implements FeatureModule {
 
   @override
   String get name => 'home';
+
+  @override
+  String get version => '1.0.0';
 }

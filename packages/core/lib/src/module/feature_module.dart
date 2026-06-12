@@ -5,6 +5,8 @@ abstract interface class FeatureModule {
 
   String get route;
 
+  String get version;
+
   Widget buildPage();
 
   void registerDependencies();

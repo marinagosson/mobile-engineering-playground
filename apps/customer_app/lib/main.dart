@@ -15,11 +15,11 @@ void main() async {
     ),
   );
 
-  final modules = getModules();
+  final moduleRegistry = getModules();
 
-  for (final module in modules) {
+  for (final module in moduleRegistry.all) {
     module.registerDependencies();
   }
 
-  runApp(MyApp(modules));
+  runApp(MyApp(moduleRegistry));
 }
