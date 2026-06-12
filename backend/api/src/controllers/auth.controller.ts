@@ -3,13 +3,28 @@ import { AuthService } from '../services/auth.service';
 import { loginSchema } from '../schemas/login.schema';
 import { logger } from '../observability'; 
 
+import { trace }
+  from '@opentelemetry/api';
+
 const authService = new AuthService();
 
+const tracer =
+  trace.getTracer(
+    'auth-controller',
+  );
+
 export class AuthController {
+  
   async login(
     req: Request,
     res: Response,
   ) {
+
+    const tracer =
+    trace.getTracer( 
+      'auth.controller.login',
+    );
+
     try {
       const dto =
         loginSchema.parse(
@@ -22,12 +37,6 @@ export class AuthController {
           dto.password,
         );
 
-      logger.info(
-        'User authenticated',
-        {
-          email: dto.email,
-        },
-      );
       return res.status(200).json(result);
     } catch (error) {
       

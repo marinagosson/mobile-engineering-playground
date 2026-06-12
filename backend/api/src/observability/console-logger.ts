@@ -1,6 +1,9 @@
 import { Logger }
   from './logger';
 
+import { getTraceId }
+from './trace-context';
+
 export class ConsoleLogger
   implements Logger {
 
@@ -11,6 +14,7 @@ export class ConsoleLogger
     console.log(
       JSON.stringify({
         level: 'INFO',
+        traceId: getTraceId(),
         message,
         metadata,
       }),
@@ -24,6 +28,7 @@ export class ConsoleLogger
     console.error(
       JSON.stringify({
         level: 'ERROR',
+        traceId: getTraceId(),
         message,
         metadata,
       }),

@@ -3,7 +3,10 @@ import { randomUUID } from 'crypto';
 import { Request, Response, NextFunction }
   from 'express';
 
-import { logger } from '../observability';;
+import { logger } from '../observability';
+
+import { getTraceId }
+  from '../observability/trace-context';
 
 export function requestLogger(
   req: Request,
@@ -25,11 +28,12 @@ export function requestLogger(
     logger.info(
       'Request completed',
       {
+        traceId: getTraceId(), 
         requestId,
         method: req.method,
         path: req.originalUrl,
         statusCode: res.statusCode,
-        durationMs: duration,
+        durationMs: duration, 
       },
     );
 
