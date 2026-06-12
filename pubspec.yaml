@@ -21,3 +21,10 @@ workspace:
 
 dev_dependencies:
   melos: ^7.8.2
+
+melos:
+  scripts:
+    test:
+      run: flutter test
+      packageFilters:
+        dirExists: test

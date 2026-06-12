@@ -13,10 +13,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: apps/customer_app
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,14 +22,18 @@ jobs:
         with:
           flutter-version: 3.44.1
 
-      - name: Flutter Pub Get
-        run: flutter pub get
+      - name: Install Melos
+        run: dart pub global activate melos
 
-      - name: Flutter Analyze
-        run: flutter analyze
-
-      - name: Flutter Test
-        run: flutter test
+      - name: Bootstrap Workspace
+        run: melos bootstrap
+      
+      - name: Analyze Workspace
+        run: melos exec -- flutter analyze
+      
+      - name: Run Package Tests
+        run: melos exec --dir-exists=test -- flutter test
+      
 
   backend:
     name: Backend

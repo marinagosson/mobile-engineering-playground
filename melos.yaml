@@ -5,3 +5,7 @@ repository: .
 packages:
   - packages/**
   - apps/**
+
+scripts:
+  test:
+    run: flutter test
