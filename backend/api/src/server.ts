@@ -13,6 +13,9 @@ import { requestLogger } from './middlewares/request-logger';
 
 import { authRoutes } from './routes/auth.route';
 
+import { startTelemetry }
+  from './telemetry';
+
 const app = express();
 
 app.use(cors());
@@ -29,6 +32,14 @@ app.use(
 
 app.use('/auth', authRoutes); 
 
-app.listen(3000, () => {
-  logger.info('API running on port 3000');
-});
+async function bootstrap() {
+  await startTelemetry();
+
+  app.listen(3000, () => {
+    logger.info(
+      'API running on port 3000',
+    );
+  });
+}
+
+bootstrap();
