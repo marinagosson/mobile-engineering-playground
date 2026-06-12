@@ -10,6 +10,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  observability:
   core:
   network:
   go_router: ^17.3.0 

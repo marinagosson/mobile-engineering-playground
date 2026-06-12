@@ -1,13 +1,13 @@
+import 'package:customer_app/bootstrap/bootstrap.dart';
 import 'package:flutter/material.dart';
-import 'package:network/network.dart';
 
 import 'app.dart';
 import 'modules.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  NetworkModule().registerDependencies();
+  await bootstrap();
 
   final modules = getModules();
 

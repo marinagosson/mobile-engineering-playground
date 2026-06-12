@@ -2,6 +2,7 @@ import 'package:auth/src/login_controller.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:network/network.dart';
+import 'package:observability/observability.dart';
 
 import 'login_page.dart';
 import 'auth_repository.dart';
@@ -21,7 +22,9 @@ class AuthModule implements FeatureModule {
     sl.registerLazySingleton<AuthRepository>(
       () => AuthRepositoryImpl(sl<ApiClient>()),
     );
-    sl.registerFactory(() => LoginController(sl<AuthRepository>()));
+    sl.registerFactory(
+      () => LoginController(sl<AuthRepository>(), sl<AppLogger>()),
+    );
   }
 
   @override

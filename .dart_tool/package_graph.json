@@ -9,7 +9,8 @@
     "home",
     "mobile_engineering_playground",
     "navigation",
-    "network"
+    "network",
+    "observability"
   ],
   "packages": [
     {
@@ -30,7 +31,8 @@
         "flutter",
         "home",
         "navigation",
-        "network"
+        "network",
+        "observability"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -44,7 +46,8 @@
         "core",
         "flutter",
         "go_router",
-        "network"
+        "network",
+        "observability"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -127,6 +130,19 @@
       "dependencies": [
         "core",
         "dio",
+        "flutter",
+        "observability"
+      ],
+      "devDependencies": [
+        "flutter_lints",
+        "flutter_test"
+      ]
+    },
+    {
+      "name": "observability",
+      "version": "0.0.1",
+      "dependencies": [
+        "core",
         "flutter"
       ],
       "devDependencies": [

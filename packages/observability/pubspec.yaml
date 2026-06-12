@@ -1,4 +1,4 @@
-name: network
+name: observability
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
@@ -9,9 +9,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  observability:
   core:
-  dio: ^5.9.2
   flutter:
     sdk: flutter
 

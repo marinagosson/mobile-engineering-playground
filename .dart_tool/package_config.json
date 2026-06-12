@@ -444,6 +444,12 @@
       "rootUri": "../packages/network",
       "packageUri": "lib/",
       "languageVersion": "3.12"
+    },
+    {
+      "name": "observability",
+      "rootUri": "../packages/observability",
+      "packageUri": "lib/",
+      "languageVersion": "3.12"
     }
   ],
   "generator": "pub",
