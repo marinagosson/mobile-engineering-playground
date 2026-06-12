@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [if (flags.newHomeEnabled) const ExperimentalBanner()],
+        children: [if (flags.experimentalBanner) const ExperimentalBanner()],
       ),
     );
   }

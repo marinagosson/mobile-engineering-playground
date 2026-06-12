@@ -11,6 +11,7 @@ environment:
   sdk: ^3.12.1
   
 dependencies:
+  experimental_home:
   config:
   observability:
   core:

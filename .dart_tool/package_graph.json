@@ -7,6 +7,7 @@
     "core",
     "customer_app",
     "design_system",
+    "experimental_home",
     "home",
     "mobile_engineering_playground",
     "navigation",
@@ -30,6 +31,7 @@
         "config",
         "core",
         "cupertino_icons",
+        "experimental_home",
         "flutter",
         "home",
         "navigation",
@@ -158,6 +160,19 @@
       "name": "config",
       "version": "0.0.1",
       "dependencies": [
+        "flutter"
+      ],
+      "devDependencies": [
+        "flutter_lints",
+        "flutter_test"
+      ]
+    },
+    {
+      "name": "experimental_home",
+      "version": "0.0.1",
+      "dependencies": [
+        "config",
+        "core",
         "flutter"
       ],
       "devDependencies": [

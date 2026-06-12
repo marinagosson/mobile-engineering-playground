@@ -17,6 +17,7 @@ workspace:
   - packages/network
   - packages/observability
   - packages/config
+  - packages/experimental_home
 
 dev_dependencies:
   melos: ^7.8.2

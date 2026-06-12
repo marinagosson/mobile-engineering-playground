@@ -462,6 +462,12 @@
       "rootUri": "../packages/config",
       "packageUri": "lib/",
       "languageVersion": "3.12"
+    },
+    {
+      "name": "experimental_home",
+      "rootUri": "../packages/experimental_home",
+      "packageUri": "lib/",
+      "languageVersion": "3.12"
     }
   ],
   "generator": "pub",

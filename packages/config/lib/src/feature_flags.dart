@@ -1,3 +1,4 @@
 abstract interface class FeatureFlags {
-  bool get newHomeEnabled;
+  bool get experimentalHome;
+  bool get experimentalBanner;
 }
