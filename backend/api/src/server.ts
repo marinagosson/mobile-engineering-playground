@@ -7,8 +7,7 @@ import swaggerUi
 import { swaggerDocument }
   from './docs/swagger';
 
-import { logger }
-  from './observability';
+import { logger } from './observability';
 
 import { requestLogger } from './middlewares/request-logger'; 
 
