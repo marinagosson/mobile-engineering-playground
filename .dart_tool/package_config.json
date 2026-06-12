@@ -242,6 +242,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "mocktail",
+      "rootUri": "file:///Users/marinagosson/.puro/shared/pub_cache/hosted/pub.dev/mocktail-1.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "mustache_template",
       "rootUri": "file:///Users/marinagosson/.puro/shared/pub_cache/hosted/pub.dev/mustache_template-2.0.5",
       "packageUri": "lib/",
@@ -448,6 +454,12 @@
     {
       "name": "observability",
       "rootUri": "../packages/observability",
+      "packageUri": "lib/",
+      "languageVersion": "3.12"
+    },
+    {
+      "name": "config",
+      "rootUri": "../packages/config",
       "packageUri": "lib/",
       "languageVersion": "3.12"
     }

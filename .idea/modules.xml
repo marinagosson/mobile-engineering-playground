@@ -5,6 +5,7 @@
 <module fileurl="file://$PROJECT_DIR$/packages/auth/melos_auth.iml" filepath="$PROJECT_DIR$/packages/auth/melos_auth.iml"/>
 <module fileurl="file://$PROJECT_DIR$/packages/catalog/melos_catalog.iml" filepath="$PROJECT_DIR$/packages/catalog/melos_catalog.iml"/>
 <module fileurl="file://$PROJECT_DIR$/packages/checkout/melos_checkout.iml" filepath="$PROJECT_DIR$/packages/checkout/melos_checkout.iml"/>
+<module fileurl="file://$PROJECT_DIR$/packages/config/melos_config.iml" filepath="$PROJECT_DIR$/packages/config/melos_config.iml"/>
 <module fileurl="file://$PROJECT_DIR$/packages/core/melos_core.iml" filepath="$PROJECT_DIR$/packages/core/melos_core.iml"/>
 <module fileurl="file://$PROJECT_DIR$/apps/customer_app/melos_customer_app.iml" filepath="$PROJECT_DIR$/apps/customer_app/melos_customer_app.iml"/>
 <module fileurl="file://$PROJECT_DIR$/packages/design_system/melos_design_system.iml" filepath="$PROJECT_DIR$/packages/design_system/melos_design_system.iml"/>

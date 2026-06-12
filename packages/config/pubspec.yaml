@@ -1,4 +1,4 @@
-name: auth
+name: config
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
@@ -9,15 +9,10 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  observability:
-  core:
-  network:
-  go_router: ^17.3.0 
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  mocktail: ^1.0.4
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0

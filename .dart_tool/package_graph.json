@@ -3,6 +3,7 @@
     "auth",
     "catalog",
     "checkout",
+    "config",
     "core",
     "customer_app",
     "design_system",
@@ -26,6 +27,7 @@
       "version": "1.0.0+1",
       "dependencies": [
         "auth",
+        "config",
         "core",
         "cupertino_icons",
         "flutter",
@@ -51,7 +53,8 @@
       ],
       "devDependencies": [
         "flutter_lints",
-        "flutter_test"
+        "flutter_test",
+        "mocktail"
       ]
     },
     {
@@ -143,6 +146,17 @@
       "version": "0.0.1",
       "dependencies": [
         "core",
+        "flutter"
+      ],
+      "devDependencies": [
+        "flutter_lints",
+        "flutter_test"
+      ]
+    },
+    {
+      "name": "config",
+      "version": "0.0.1",
+      "dependencies": [
         "flutter"
       ],
       "devDependencies": [
@@ -248,6 +262,15 @@
         "async",
         "collection",
         "meta"
+      ]
+    },
+    {
+      "name": "mocktail",
+      "version": "1.0.5",
+      "dependencies": [
+        "collection",
+        "matcher",
+        "test_api"
       ]
     },
     {
